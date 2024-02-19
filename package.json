@@ -1,0 +1,26 @@
+{
+  "name": "movie-mania",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:dev": "cd client && npm run dev",
+    "server:dev": "cd server && npm run dev",
+    "start": "concurrently -n client,server -c blue,red \"npm run client:dev\" \"npm run server:dev\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "~3.0.3",
+    "ts-node": "~10.9.2"
+  }
+}
